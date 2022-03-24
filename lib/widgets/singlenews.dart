@@ -5,13 +5,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:news/model/news.dart';
 
-class SingleProduct extends StatelessWidget {
+class SingleNews extends StatelessWidget {
   final String name;
   final String image;
   final String content;
   final Timestamp time;
 
-  const SingleProduct({Key key, this.name, this.image, this.content, this.time})
+  const SingleNews({Key key, this.name, this.image, this.content, this.time})
       : super(key: key);
 
   @override
@@ -23,9 +23,6 @@ class SingleProduct extends StatelessWidget {
         Navigator.of(context).pushNamed('/detail',
             arguments:
                 News(name: name, image: image, content: content, time: time));
-      },
-      onLongPress: () {
-        showAlertDialog(context);
       },
       child: Card(
         child: Container(
@@ -91,42 +88,6 @@ class SingleProduct extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-
-  showAlertDialog(BuildContext context) {
-    // set up the buttons
-    Widget cancelButton = TextButton(
-      child: Text("không"),
-      onPressed: () {
-        Navigator.of(context).pop();
-      },
-    );
-    Widget continueButton = TextButton(
-      child: Text("có"),
-      onPressed: () {
-        context.read<NewsSavedProvider>().deleteNew(
-            News(name: name, image: image, content: content, time: time));
-        Navigator.of(context).pop();
-      },
-    );
-
-    // set up the AlertDialog
-    AlertDialog alert = AlertDialog(
-      title: Text("Thông báo"),
-      content: Text("Bạn có chắc chắn muốn xóa không?"),
-      actions: [
-        cancelButton,
-        continueButton,
-      ],
-    );
-
-    // show the dialog
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return alert;
-      },
     );
   }
 }

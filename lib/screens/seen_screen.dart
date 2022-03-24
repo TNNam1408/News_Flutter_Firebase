@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news/provider/seen_provider.dart';
-import 'package:news/widgets/listproduct.dart';
+import 'package:news/widgets/listnews.dart';
 import 'package:provider/provider.dart';
 
 class SeenScreen  extends StatelessWidget {
@@ -22,7 +22,7 @@ class SeenScreen  extends StatelessWidget {
 
         backgroundColor: Colors.green,
       ),
-      body: ListProduct(
+      body: ListNews(
             name: 'Tin đã xem',
             snapShot: saveList.news,
           ),

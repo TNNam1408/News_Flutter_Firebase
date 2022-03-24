@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:news/provider/news_saved_provider.dart';
-import 'package:news/widgets/listproduct.dart';
+import 'package:news/widgets/listnews.dart';
+import 'package:news/widgets/listsave.dart';
 import 'package:provider/provider.dart';
 class SaveScreen extends StatelessWidget {
 
@@ -17,7 +18,7 @@ class SaveScreen extends StatelessWidget {
         title: const Text("Tin đã lưu"),
         backgroundColor: Colors.green,
       ),
-      body: ListProduct(
+      body: ListSave(
             name: 'Tin đã lưu',
             snapShot: context.watch<NewsSavedProvider>().news,
           ),

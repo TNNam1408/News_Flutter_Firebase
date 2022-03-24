@@ -4,7 +4,7 @@ import 'package:news/provider/database.dart';
 import 'package:provider/provider.dart';
 import 'package:rating_dialog/rating_dialog.dart';
 
-import '../widgets/listproduct.dart';
+import '../widgets/listnews.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -20,41 +20,10 @@ class HomeScreen extends StatefulWidget {
 Database databaseProvider;
 
 class _HomeScreenState extends State<HomeScreen> {
-  // Widget _buildCategoryName({String name}) {
-  //   return Container(
-  //     padding: EdgeInsets.only(right: 10),
-  //     height: 25,
-  //     child: Text(
-  //       "$name",
-  //       style: const TextStyle(
-  //           color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
-  //     ),
-  //   );
-  // }
 
   Widget _BuildTinNong() {
     List<News> tinnong = databaseProvider.getTinNongList;
-    // List<Category> tinnongname =
-    //     databaseProvider.getTinNongNameList;
-    // return Row(
-    //   children: tinnongname.map((e) {
-    //     return GestureDetector(
-    //       onTap: () {
-    //         Navigator.of(context).push(
-    //           MaterialPageRoute(
-    //             builder: (ctx) => ListProduct(
-    //               name: "Tin Nóng",
-    //               snapShot: tinnong,
-    //             ),
-    //           ),
-    //         );
-    //       },
-    //       child: _buildCategoryName(name: e.name),
-    //     );
-    //   }).toList(),
-    // );
-
-    return ListProduct(name: 'Tin nóng', snapShot: tinnong);
+    return ListNews(name: 'Tin nóng', snapShot: tinnong);
   }
 
   Widget buildButtonTinnong() {
@@ -131,25 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _BuildSanPhamSo() {
     List<News> sanphamso = databaseProvider.getSanPhamSoList;
-    // List<Category> sanphamsoname = databaseProvider.getSanPhamSoNameList;
-    // return Row(
-    //   children: sanphamsoname.map((e) {
-    //     return GestureDetector(
-    //       onTap: () {
-    //         Navigator.of(context).push(
-    //           MaterialPageRoute(
-    //             builder: (ctx) => ListProduct(
-    //               name: "Sản Phẩm Số",
-    //               snapShot: sanphamso,
-    //             ),
-    //           ),
-    //         );
-    //       },
-    //       child: _buildCategoryName(name: e.name),
-    //     );
-    //   }).toList(),
-    // );
-    return ListProduct(
+    return ListNews(
       name: "Sản Phẩm Số",
       snapShot: sanphamso,
     );
@@ -157,25 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _BuildCuocSongSo() {
     List<News> cuocsongso = databaseProvider.getCuocSongSoList;
-    // List<Category> tinnongname = databaseProvider.getCuocSongSoNameList;
-    // return Row(
-    //   children: tinnongname.map((e) {
-    //     return GestureDetector(
-    //       onTap: () {
-    //         Navigator.of(context).push(
-    //           MaterialPageRoute(
-    //             builder: (ctx) => ListProduct(
-    //               name: "Cuộc Sống Số",
-    //               snapShot: tinnong,
-    //             ),
-    //           ),
-    //         );
-    //       },
-    //       child: _buildCategoryName(name: e.name),
-    //     );
-    //   }).toList(),
-    // );
-    return ListProduct(
+    return ListNews(
       name: "Cuộc Sống Số",
       snapShot: cuocsongso,
     );
@@ -183,25 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _BuildBaoMat() {
     List<News> baomat = databaseProvider.getBaoMatList;
-    //   List<Category> baomatname = databaseProvider.getBaoMatNameList;
-    //   return Row(
-    //     children: baomatname.map((e) {
-    //       return GestureDetector(
-    //         onTap: () {
-    //           Navigator.of(context).push(
-    //             MaterialPageRoute(
-    //               builder: (ctx) => ListProduct(
-    //                 name: "Bảo Mật",
-    //                 snapShot: baomat,
-    //               ),
-    //             ),
-    //           );
-    //         },
-    //         child: _buildCategoryName(name: e.name),
-    //       );
-    //     }).toList(),
-    //   );
-    return ListProduct(
+    return ListNews(
       name: "Bảo Mật",
       snapShot: baomat,
     );
