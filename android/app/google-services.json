@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "602633596130",
+    "project_id": "news-dace5",
+    "storage_bucket": "news-dace5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602633596130:android:7672ca67b5f7847171c2bb",
+        "android_client_info": {
+          "package_name": "com.example.news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602633596130-kdu0otkqdl3rfpc2ta3kghr23o7ubbs5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4fxtCtr9GF0F_1pwFQX5U9pXmUi_md6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602633596130-kdu0otkqdl3rfpc2ta3kghr23o7ubbs5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
