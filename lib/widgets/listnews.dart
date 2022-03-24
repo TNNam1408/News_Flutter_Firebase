@@ -49,7 +49,6 @@ class ListNews extends StatelessWidget {
                   ),
                 )
                     .toList(),
-
               ),
             ),
           ],

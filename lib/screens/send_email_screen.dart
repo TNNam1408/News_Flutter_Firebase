@@ -61,7 +61,7 @@ class SendEmailScreen extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           Container(
             width: MediaQuery.of(context).size.width-20,
             height: 200,

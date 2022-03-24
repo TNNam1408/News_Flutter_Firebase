@@ -46,7 +46,7 @@ class SingleNews extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Column(
@@ -56,7 +56,7 @@ class SingleNews extends StatelessWidget {
                     Container(
                       width: 250,
                       child: Text(
-                        "${name}",
+                        name,
                         style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 17,
@@ -64,8 +64,8 @@ class SingleNews extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "${DateTime.parse(time.toDate().toString()).toString()}",
-                      style: TextStyle(
+                      DateTime.parse(time.toDate().toString()).toString(),
+                      style: const TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
                       ),

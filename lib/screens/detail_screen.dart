@@ -37,19 +37,27 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Center(child: Text('Chi tiết')), actions: [
-        IconButton(onPressed: () {}, icon: Icon(Icons.share)),
-        Consumer<NewsSavedProvider>(builder: (context, value, _) {
-          return IconButton(
-              onPressed: () {
-                context.read<NewsSavedProvider>().addNew(News(
-                    name: name, image: image, content: content, time: time));
+      appBar: AppBar(
+          title: const Center(
+            child: Text('Chi tiết'),
+          ),
+          backgroundColor: Colors.green,
+          actions: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.share)),
+            Consumer<NewsSavedProvider>(builder: (context, value, _) {
+              return IconButton(
+                  onPressed: () {
+                    context.read<NewsSavedProvider>().addNew(News(
+                        name: name,
+                        image: image,
+                        content: content,
+                        time: time));
                     // thông báo đã lưu
                     showToat(context);
-              },
-              icon: const Icon(Icons.save));
-        })
-      ]),
+                  },
+                  icon: const Icon(Icons.save));
+            })
+          ]),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

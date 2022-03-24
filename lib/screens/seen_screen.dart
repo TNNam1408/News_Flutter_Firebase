@@ -28,5 +28,4 @@ class SeenScreen  extends StatelessWidget {
           ),
     );
   }
-
 }

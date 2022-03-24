@@ -49,7 +49,7 @@ class SingleSave extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Column(
@@ -68,7 +68,7 @@ class SingleSave extends StatelessWidget {
                     ),
                     Text(
                       "${DateTime.parse(time.toDate().toString()).toString()}",
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
                       ),
@@ -97,13 +97,13 @@ class SingleSave extends StatelessWidget {
   showAlertDialog(BuildContext context) {
     // set up the buttons
     Widget cancelButton = TextButton(
-      child: Text("không"),
+      child: const Text("không"),
       onPressed: () {
         Navigator.of(context).pop();
       },
     );
     Widget continueButton = TextButton(
-      child: Text("có"),
+      child: const Text("có"),
       onPressed: () {
         context.read<NewsSavedProvider>().deleteNew(
             News(name: name, image: image, content: content, time: time));
@@ -113,8 +113,8 @@ class SingleSave extends StatelessWidget {
 
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
-      title: Text("Thông báo"),
-      content: Text("Bạn có chắc chắn muốn xóa không?"),
+      title: const Text("Thông báo"),
+      content: const Text("Bạn có chắc chắn muốn xóa không?"),
       actions: [
         cancelButton,
         continueButton,

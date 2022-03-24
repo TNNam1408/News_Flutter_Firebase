@@ -161,19 +161,19 @@ class _HomeScreenState extends State<HomeScreen> {
   final _dialog = RatingDialog(
     initialRating: 1.0,
     // your app's name?
-    title: Text(
+    title: const Text(
       'Đánh giá ứng dụng',
       textAlign: TextAlign.center,
-      style: const TextStyle(
+      style: TextStyle(
         fontSize: 25,
         fontWeight: FontWeight.bold,
       ),
     ),
     // encourage your user to leave a high rating?
-    message: Text(
+    message: const Text(
       'Hãy đánh giá 5 sao nếu bạn thấy ứng dụng có ích',
       textAlign: TextAlign.center,
-      style: const TextStyle(fontSize: 15),
+      style: TextStyle(fontSize: 15),
     ),
     // your app's logo?
     image: const FlutterLogo(size: 100),
@@ -188,7 +188,7 @@ class _HomeScreenState extends State<HomeScreen> {
         // send their comments to your email or anywhere you wish
         // ask the user to contact you instead of leaving a bad review
       } else {
-        return Text("Error");
+        return const Text("Error");
       }
     },
   );
@@ -196,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _buidldDrawer(BuildContext context) {
     return Drawer(
       child: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         color: Colors.blueGrey[400],
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
