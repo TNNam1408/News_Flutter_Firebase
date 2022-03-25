@@ -355,6 +355,38 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
+            Container(
+              alignment: Alignment.centerLeft,
+              width: double.infinity,
+              height: 50,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Row(
+                children: [
+                  const Icon(
+                    Icons.logout,
+                    color: Colors.white,
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      _scaffoldKey.currentState.openEndDrawer();
+                      Navigator.of(context).pushReplacementNamed('/login');
+                    },
+                    child: const Text(
+                      "Đăng xuất",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:news/provider/database.dart';
 import 'package:news/provider/news_saved_provider.dart';
@@ -5,7 +6,12 @@ import 'package:news/provider/seen_provider.dart';
 import 'package:news/router/app_route.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async{
+  // Future<FirebaseApp> _initializeFirebase() async{
+  //   FirebaseApp firebaseApp = await FirebaseApp.instance;
+  //   return firebaseApp;
+  // }final FirebaseAuth _auth = FirebaseAuth.instance;
+  await FirebaseApp.instance;
   runApp(const MyApp());
 }
 
