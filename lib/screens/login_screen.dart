@@ -53,14 +53,14 @@ class _LoginScreenState extends State<LoginScreen> {
               "News",
               style: TextStyle(
                   color: Colors.black,
-                  fontSize: 28,
+                  fontSize: 40,
                   fontWeight: FontWeight.bold),
             ),
             const Text(
-              "Login to Your App",
+              "Đăng nhập ứng dụng của bạn",
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 44,
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -71,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
               controller: _email,
               keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(
-                hintText: "User email",
+                hintText: "email",
                 prefixIcon: Icon(
                   Icons.mail,
                   color: Colors.black,
@@ -85,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
               controller: _pass,
               obscureText: true,
               decoration: const InputDecoration(
-                hintText: "User Password",
+                hintText: "mật khẩu",
                 prefixIcon: Icon(
                   Icons.lock,
                   color: Colors.black,
@@ -93,9 +93,9 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const Text(
-              "Don't Remember you password?",
+              "Quên mật khẩu?",
               style: TextStyle(
-                color: Colors.blue,
+                color: Colors.green,
               ),
             ),
             const SizedBox(
@@ -104,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Container(
               width: double.infinity,
               child: RawMaterialButton(
-                fillColor: const Color(0xFF0069FE),
+                fillColor: Colors.green,
                 elevation: 0.0,
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 shape: RoundedRectangleBorder(
@@ -122,7 +122,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   }
                 },
                 child: const Text(
-                  "Login",
+                  "Đăng nhập",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
@@ -136,7 +136,7 @@ class _LoginScreenState extends State<LoginScreen> {
               },
               child: const Text(
                 "Đăng ký",
-                style: TextStyle(fontSize: 25),
+                style: TextStyle(fontSize: 25, color: Colors.green),
               ),
             ),
           ],

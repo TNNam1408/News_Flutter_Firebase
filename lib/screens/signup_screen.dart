@@ -51,16 +51,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
               "News",
               style: TextStyle(
                   color: Colors.black,
-                  fontSize: 28,
+                  fontSize: 40,
                   fontWeight: FontWeight.bold
               ),
             ),
 
             const Text(
-              "Signup to Your App",
+              "Đăng ký tài khoản của bạn",
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 44,
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -71,7 +71,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               controller: _email,
               keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(
-                hintText: "User email",
+                hintText: "email",
                 prefixIcon: Icon(Icons.mail,color: Colors.black,),
               ),
             ),
@@ -82,7 +82,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               controller: _pass,
               obscureText: true,
               decoration: const InputDecoration(
-                hintText: "User Password",
+                hintText: "mật khẩu ",
                 prefixIcon: Icon(Icons.lock,color: Colors.black,),
               ),
             ),
@@ -90,9 +90,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
               height: 80,
             ),
             Container(
+
               width: double.infinity,
               child: RawMaterialButton(
-                fillColor: const Color(0xFF0069FE),
+
+                fillColor: Colors.green,
                 elevation: 0.0,
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 shape: RoundedRectangleBorder(
@@ -106,12 +108,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     print('error sign up');
                   }
                 },
-                child: const Text("Sign Up",
+                child: const Text("Đăng ký",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                   ),
                 ),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacementNamed('/login');
+              },
+              child: const Text(
+                "Đăng nhập",
+                style: TextStyle(fontSize: 25, color: Colors.green),
               ),
             ),
           ],
